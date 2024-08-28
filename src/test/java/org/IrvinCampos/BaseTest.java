@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeClass;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 
 public class BaseTest {
     public AndroidDriver driver;
@@ -28,6 +29,7 @@ public class BaseTest {
 
 //        AndroidDriver, IOSDriver
          driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
+         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
     @AfterClass
     public void tearDown() {
