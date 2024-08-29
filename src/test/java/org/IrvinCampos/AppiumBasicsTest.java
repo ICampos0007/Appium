@@ -21,9 +21,6 @@ public class AppiumBasicsTest extends BaseTest {
         Assert.assertEquals(actualText,"WiFi settings");
 
         driver.findElements(AppiumBy.className("android.widget.Button")).get(1).click();
-
-
-
     }
 
 }
