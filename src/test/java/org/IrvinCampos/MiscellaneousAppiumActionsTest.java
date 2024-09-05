@@ -18,8 +18,8 @@ public class MiscellaneousAppiumActionsTest extends BaseTest{
 //        adb shell dumpsys window | find "mCurrentFocus"
 //        Activity activity = new Activity("12ac23c u0 io.appium.android.apis","io.appium.android.apis.preference.PreferenceDependencies");
         ((JavascriptExecutor) driver).executeScript("mobile: startActivity", ImmutableMap.of(
-                "appPackage", "io.appium.android.apis",
-                "appActivity", "io.appium.android.apis.preference.PreferenceDependencies"
+                "appPackage", "197cbdc u0 io.appium.android.apis/io.appium.android.apis.preference.PreferenceDependencies"
+//                "appActivity", "io.appium.android.apis.preference.PreferenceDependencies"
         ));
 
 
