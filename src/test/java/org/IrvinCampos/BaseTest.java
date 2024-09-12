@@ -70,6 +70,11 @@ public class BaseTest {
                 "endY", y
         ));
     }
+
+    public Double formattedAmount(String amount) {
+        Double price = Double.parseDouble(amount.substring(1));
+        return price;
+    }
     @AfterClass
     public void tearDown() {
         driver.quit();

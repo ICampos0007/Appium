@@ -35,11 +35,26 @@ public class ECommerceThreeTest extends BaseTest{
        int productCount = productPrices.size();
        double totalSum =0;
        for (int i=0; i<productCount; i++) {
-           String amount = productPrices.get(i).getText();
-           Double price = Double.parseDouble(amount.substring(1));
+           String amountString = productPrices.get(i).getText();
+           Double price = formattedAmount(amountString);
            totalSum = totalSum + price;
 
        }
+
+       String displaySum = driver.findElement(By.id("com.androidsample.generalstore:id/totalAmountLbl")).getText();
+       Double displayFormattedSum = formattedAmount(displaySum);
+
+       Assert.assertEquals(totalSum,displayFormattedSum);
+
+//      com.androidsample.generalstore:id/termsButton
+        WebElement termButton = driver.findElement(By.id("com.androidsample.generalstore:id/termsButton"));
+       LongPressAction(termButton);
+       String terms = driver.findElement(By.id("com.androidsample.generalstore:id/alertTitle")).getText();
+       Assert.assertEquals(terms, "Terms Of Conditions");
+        driver.findElement(By.id("android:id/button1")).click();
+       driver.findElement(AppiumBy.className("android.widget.CheckBox")).click();
+       driver.findElement(By.id("com.androidsample.generalstore:id/btnProceed")).click();
+       Thread.sleep(2000);
 
 
     }
