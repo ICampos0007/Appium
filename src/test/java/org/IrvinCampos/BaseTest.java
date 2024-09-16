@@ -26,6 +26,7 @@ public class BaseTest {
         service.start();
         UiAutomator2Options options = new UiAutomator2Options();
         options.setDeviceName("IrvinEmulator");
+        options.setChromedriverExecutable("C://Users//Irvin//Desktop//Selenium-Server//ChromeDriver.exe");
 //        use this line of code if you want to fully reset the phones downloaded apk files
 //        options.setFullReset(true);
 //        options.setApp("C://Users//Irvin//Desktop//Appium//src//test//java//org//IrvinCampos//resources//test.apk");
