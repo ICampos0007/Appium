@@ -25,7 +25,8 @@ public class BaseTest {
                 .withIPAddress("127.0.0.1").usingPort(4723).build();
         service.start();
         UiAutomator2Options options = new UiAutomator2Options();
-        options.setDeviceName("IrvinEmulator");
+        options.setDeviceName("IrvinEmulator"); // android emulator
+//        options.setDeviceName("Android Device"); // plugged in phone to pc
         options.setChromedriverExecutable("C://Users//Irvin//Desktop//Selenium-Server//ChromeDriver.exe");
 //        use this line of code if you want to fully reset the phones downloaded apk files
 //        options.setFullReset(true);
@@ -44,7 +45,7 @@ public class BaseTest {
                         "duration",2000));
     }
 
-    public void SCrolltoEndAction() {
+    public void SCrollToEndAction() {
         // No prior knowledge of where to scroll
         boolean canScrollMore;
         do {

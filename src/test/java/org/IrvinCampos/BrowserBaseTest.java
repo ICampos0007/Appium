@@ -21,7 +21,8 @@ public class BrowserBaseTest {
                 .withIPAddress("127.0.0.1").usingPort(4723).build();
         service.start();
         UiAutomator2Options options = new UiAutomator2Options();
-        options.setDeviceName("IrvinEmulator");
+//        options.setDeviceName("IrvinEmulator");
+        options.setDeviceName("Android Device");
         options.setChromedriverExecutable("C://Users//Irvin//Desktop//Selenium-Server//ChromeDriver.exe");
         options.setCapability("browserName", "chrome");
 
